@@ -11,7 +11,11 @@ import Foundation
 enum EmployeeType {
     case foodService
     case rideService
-    case Maintenence
+    case maintenence
+}
+
+enum EmployeeError: Error {
+    case accessNotAllowed(description: String)
 }
 
 class Employee {
@@ -45,30 +49,30 @@ class Employee {
         self.employee = employee
     }
     
-    func checkForRideAccess() -> (isAccessAllowed: Bool, canSkipLine: Bool){
+    func swipe() -> (isAccessAllowed: Bool, canSkipLine: Bool){
         
         switch employee {
         case .foodService: return (isAccessAllowed: true, canSkipLine: false)
         case .rideService: return (isAccessAllowed: true, canSkipLine: false)
-        case .Maintenence: return (isAccessAllowed: true, canSkipLine: false)
+        case .maintenence: return (isAccessAllowed: true, canSkipLine: false)
         }
     }
     
-    func checkAccessIn(area: AccessArea) -> Bool {
+    func swipe(area: AccessArea) throws -> Bool {
         if employee == .foodService && (area == .amusementArea || area == .kitchArea ){
             return true
         } else if employee == .rideService && (area == .amusementArea || area == .rideControlArea ) {
             return true
-        } else if employee == .Maintenence && (area == .amusementArea || area == .maintenanceArea || area == .kitchArea || area == .rideControlArea){
+        } else if employee == .maintenence && (area == .amusementArea || area == .maintenanceArea || area == .kitchArea || area == .rideControlArea){
             return true
         } else {
-            return false
+            throw EmployeeError.accessNotAllowed(description: "Not Allowed at \(area).")
         }
     }
     
-    func getDiscount() -> (food: Int, merchandise: Int) {
+    func getDiscount() -> (onFood: Int, onMerchandise: Int) {
         switch employee {
-        default : return (food: 15, merchandise: 25)
+        default : return (onFood: 15, onMerchandise: 25)
         }
     }
     

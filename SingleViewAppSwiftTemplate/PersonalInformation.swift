@@ -21,6 +21,7 @@ enum RideAccess {
     case skipLine
 }
 
+//Error for Personal Information only.
 enum PersonalInformationError: Error {
     case missingFirstName(description: String)
     case missingLastName(description: String)
@@ -44,7 +45,7 @@ class PersonalInformation {
         
         self.firstName = firstName
         self.lastName = lastName
-        self.age = dateOfBirth?.actualAge()
+        self.age = dateOfBirth?.calculateChildsAge()
         self.streetAddress = streetAddress
         self.city = city
         self.state = state
@@ -76,7 +77,7 @@ class DateOfBirth {
         self.day = day
     }
     
-    func actualAge() -> Int? {
+    func calculateChildsAge() -> Int? {
 
         let dateOfBirth = Calendar.current.date(from: DateComponents(calendar: nil, timeZone: nil, era: nil, year: year, month: month, day: day, hour: nil, minute: nil, second: nil, nanosecond: nil, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil))
         
