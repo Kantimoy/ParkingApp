@@ -8,19 +8,6 @@
 
 import Foundation
 
-enum AccessArea {
-    case amusementArea
-    case kitchArea
-    case rideControlArea
-    case maintenanceArea
-    case officeArea
-}
-
-enum RideAccess {
-    case allAccess
-    case skipLine
-}
-
 //Error for Personal Information only.
 enum PersonalInformationError: Error {
     case missingFirstName(description: String)
@@ -63,27 +50,5 @@ class PersonalInformation {
 extension Date {
     var age: Int {
         return Calendar.current.dateComponents([.year], from: self, to: Date()).year!
-    }
-}
-
-class DateOfBirth {
-    let year: Int
-    let month: Int
-    let day: Int
-    
-    init(year: Int, month: Int, day: Int) {
-        self.year = year
-        self.month = month
-        self.day = day
-    }
-    
-    func calculateChildsAge() -> Int? {
-
-        let dateOfBirth = Calendar.current.date(from: DateComponents(calendar: nil, timeZone: nil, era: nil, year: year, month: month, day: day, hour: nil, minute: nil, second: nil, nanosecond: nil, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil))
-        
-        if let age = dateOfBirth?.age {
-            return age
-        }
-        return nil
     }
 }

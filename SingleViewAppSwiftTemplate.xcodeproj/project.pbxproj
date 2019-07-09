@@ -18,7 +18,7 @@
 		B8062A8322D3143A00AC02D9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8222D3143A00AC02D9 /* Manager.swift */; };
 		B8062A8522D395DC00AC02D9 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8422D395DC00AC02D9 /* Employee.swift */; };
 		B8062A8722D3C30600AC02D9 /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8622D3C30600AC02D9 /* PersonalInformation.swift */; };
-		B8C1B6CF22D3DAB800CAAD35 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B6CE22D3DAB800CAAD35 /* Test.swift */; };
+		B88EF1CF22D52EE900EB8EC2 /* HelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88EF1CE22D52EE900EB8EC2 /* HelperClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		B8062A8222D3143A00AC02D9 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		B8062A8422D395DC00AC02D9 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B8062A8622D3C30600AC02D9 /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
-		B8C1B6CE22D3DAB800CAAD35 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		B88EF1CE22D52EE900EB8EC2 /* HelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				B8062A8422D395DC00AC02D9 /* Employee.swift */,
 				B8062A8222D3143A00AC02D9 /* Manager.swift */,
 				B8062A8622D3C30600AC02D9 /* PersonalInformation.swift */,
-				B8C1B6CE22D3DAB800CAAD35 /* Test.swift */,
+				B88EF1CE22D52EE900EB8EC2 /* HelperClass.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -276,8 +276,8 @@
 			files = (
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
+				B88EF1CF22D52EE900EB8EC2 /* HelperClass.swift in Sources */,
 				B8062A8122D29D3900AC02D9 /* Guest.swift in Sources */,
-				B8C1B6CF22D3DAB800CAAD35 /* Test.swift in Sources */,
 				B8062A8522D395DC00AC02D9 /* Employee.swift in Sources */,
 				B8062A8322D3143A00AC02D9 /* Manager.swift in Sources */,
 				B8062A8722D3C30600AC02D9 /* PersonalInformation.swift in Sources */,
