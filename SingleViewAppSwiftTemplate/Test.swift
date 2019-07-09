@@ -50,3 +50,41 @@ func testForGuest() {
         print(error)
     }
 }
+
+
+
+func testForEmployee() {
+    
+    do {
+        
+        //------------3 Employees ----------
+//        let first = PersonalInformation()
+//        let second = PersonalInformation(firstName: "John", lastName: "Smith", dateOfBirth: nil, streetAddress: "some street", city: "some city", state: "some state", zipCode: "some zipcode")
+//        let third = PersonalInformation(firstName: "Stanley", lastName: "nova", dateOfBirth: nil, streetAddress: "street", city: "city", state: "state", zipCode: "zip")
+        
+        
+        //----------------------First Employee. -- Personal Info is missing.
+        
+        //        let firstEmployee = try Employee(personalInformation: first, employee: .foodService)
+        //        try firstEmployee.swipe().canSkipLine
+        
+        //----------------------Second Employee(rideService) -- Check for ride and area access.
+        //        let secondEmployee = try Employee(personalInformation: second, employee: .rideService)
+        //        try secondEmployee.swipe().canSkipLine
+        //        try print(secondEmployee.swipe(area: .rideControlArea))
+        //        try print(secondEmployee.swipe(area: .kitchArea))
+        //        try print(secondEmployee.getDiscount().onMerchandise)
+        
+        
+        //----------------------Third Employee(maintenence).
+        //        let thirdEmployee = try Employee(personalInformation: third, employee: .maintenence)
+        //        try thirdEmployee.swipe().canSkipLine
+        //        try print(thirdEmployee.swipe(area: .rideControlArea))
+        //        try print(thirdEmployee.swipe(area: .kitchArea))
+        //        try print(thirdEmployee.getDiscount().onFood)
+    
+    }
+    catch {
+        print(error)
+    }
+}
