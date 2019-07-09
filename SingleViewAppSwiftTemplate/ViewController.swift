@@ -10,13 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var redView: UIView = {
-        
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-        
-    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

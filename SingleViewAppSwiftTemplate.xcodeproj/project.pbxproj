@@ -15,9 +15,10 @@
 		3A8AADDE1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADDD1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift */; };
 		3A8AADE91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */; };
 		B8062A8122D29D3900AC02D9 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8022D29D3900AC02D9 /* Guest.swift */; };
-		B8062A8322D3143A00AC02D9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8222D3143A00AC02D9 /* Protocols.swift */; };
+		B8062A8322D3143A00AC02D9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8222D3143A00AC02D9 /* Manager.swift */; };
 		B8062A8522D395DC00AC02D9 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8422D395DC00AC02D9 /* Employee.swift */; };
-		B8062A8722D3C30600AC02D9 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8622D3C30600AC02D9 /* Rules.swift */; };
+		B8062A8722D3C30600AC02D9 /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8062A8622D3C30600AC02D9 /* PersonalInformation.swift */; };
+		B8C1B6CF22D3DAB800CAAD35 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B6CE22D3DAB800CAAD35 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,10 @@
 		3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateUITests.swift; sourceTree = "<group>"; };
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8062A8022D29D3900AC02D9 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
-		B8062A8222D3143A00AC02D9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B8062A8222D3143A00AC02D9 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		B8062A8422D395DC00AC02D9 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
-		B8062A8622D3C30600AC02D9 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		B8062A8622D3C30600AC02D9 /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
+		B8C1B6CE22D3DAB800CAAD35 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +115,9 @@
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
 				B8062A8022D29D3900AC02D9 /* Guest.swift */,
 				B8062A8422D395DC00AC02D9 /* Employee.swift */,
-				B8062A8222D3143A00AC02D9 /* Protocols.swift */,
-				B8062A8622D3C30600AC02D9 /* Rules.swift */,
+				B8062A8222D3143A00AC02D9 /* Manager.swift */,
+				B8062A8622D3C30600AC02D9 /* PersonalInformation.swift */,
+				B8C1B6CE22D3DAB800CAAD35 /* Test.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -274,9 +277,10 @@
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
 				B8062A8122D29D3900AC02D9 /* Guest.swift in Sources */,
+				B8C1B6CF22D3DAB800CAAD35 /* Test.swift in Sources */,
 				B8062A8522D395DC00AC02D9 /* Employee.swift in Sources */,
-				B8062A8322D3143A00AC02D9 /* Protocols.swift in Sources */,
-				B8062A8722D3C30600AC02D9 /* Rules.swift in Sources */,
+				B8062A8322D3143A00AC02D9 /* Manager.swift in Sources */,
+				B8062A8722D3C30600AC02D9 /* PersonalInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,48 +8,63 @@
 
 import Foundation
 
+enum GuestType {
+    case classic
+    case vip
+    case freeChild
+}
+
+enum GuestError: Error {
+    case OverAge(Description: String)
+}
+
 
 class Guest {
     let personalInformation: PersonalInformation?
     let guestType: GuestType
-    let accessArea: AccessArea
-    let rideAccess: RideAccess
     
-    init(personalInformation: PersonalInformation?, guestType: GuestType, accessArea: AccessArea, rideAccess: RideAccess) throws {
-        
-        guard let personalInformation = personalInformation, let _ = personalInformation.dateOfBirth else {
-            throw PersonalInformationError.missingDateOfBirth
-        }
+    init(personalInformation: PersonalInformation?, guestType: GuestType) throws {
         self.personalInformation = personalInformation
         self.guestType = guestType
-        self.accessArea = accessArea
-        self.rideAccess = rideAccess
+        try checkIfChild()
+
     }
     
-    func checkRideAccessFor(guest: GuestType) -> (allowedAccess: Bool, andSkipLine: Bool){
-        
-        switch guest {
-        case .classic: return (allowedAccess: true, andSkipLine: false)
-        case .vip: return (allowedAccess: true, andSkipLine: true)
-        case .freeChild: return (allowedAccess: true, andSkipLine: false)
+    private func checkIfChild() throws {
+        if guestType == .freeChild {
+            guard let age = personalInformation?.age else {
+                throw PersonalInformationError.missingDateOfBirth(description: "Did not provide Birth Date.")
+            }
+            if age >= 5 {
+                throw GuestError.OverAge(Description: "Change Guest Type, the person's age is over 5 years old.")
+            }
         }
-        
     }
     
-    func checkAccess(for guest: GuestType,in area: AccessArea) -> Bool {
-        if guest == .classic && area == .amusementArea {
+    func checkRideAccess() throws -> (isAccessAllowed: Bool, canSkipLine: Bool){
+
+        switch guestType {
+        case .classic: return (isAccessAllowed: true, canSkipLine: false)
+        case .vip: return (isAccessAllowed: true, canSkipLine: true)
+        case .freeChild: return (isAccessAllowed: true, canSkipLine: false)
+        }
+    }
+    
+    func checkAccessFor(area: AccessArea) -> Bool {
+        
+        if guestType == .classic && area == .amusementArea {
             return true
-        } else if guest == .vip && area == .amusementArea {
+        } else if guestType == .vip && area == .amusementArea {
             return true
-        } else if guest == .freeChild && area == .amusementArea {
+        } else if guestType == .freeChild && area == .amusementArea {
             return true
         } else {
             return false
         }
     }
     
-    func getDiscount(for guest: GuestType) -> (food: Int?, merchandise: Int?) {
-        switch guest {
+    func getDiscountIn() -> (food: Int?, merchandise: Int?) {
+        switch guestType {
         case .classic: return (food: nil, merchandise: nil)
         case .vip: return (food: 10,merchandise: 20)
         case .freeChild: return (food: nil, merchandise: nil)
